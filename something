@@ -1,0 +1,10 @@
+for (const length of [1000, 2000, 4000, 8000, 16000, 32000]) {
+  const value = 'b' + ' '.repeat(length) + 'x';
+  const start = process.hrtime.bigint();
+
+  value.trim().split(/ *, */);
+
+  const end = process.hrtime.bigint();
+
+  console.log('length = %d, time = %f ns', length, end - start);
+}
